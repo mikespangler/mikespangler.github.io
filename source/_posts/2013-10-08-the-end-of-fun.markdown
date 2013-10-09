@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "sarah_pei_presentation"
-date: 2013-10-08 20:16
+title: "The End of Fun"
+date: 2013-10-08 20:38
 comments: true
 categories: 
 ---
 
-##Who Is Better Coder? 
+##Who Makes a Better Coder? 
 ####the rigid taskmaster, or the free-floating esoteric...
 
 The idea that struck me most about Sarah Pei's presentation was that to create, successful one must fully embrace the  dynamism of their own personality.  To explain, Sarah invokes the famous Walt Whitman quote from Leaves of Grass:
