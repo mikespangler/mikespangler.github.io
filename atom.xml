@@ -1,24 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
-  <link href="http://mikespangler.github.io/atom.xml" rel="self"/>
-  <link href="http://mikespangler.github.io/"/>
-  <updated>2013-10-08T20:39:04-04:00</updated>
-  <id>http://mikespangler.github.io/</id>
-  <author>
-    <name><![CDATA[Your Name]]></name>
-    
-  </author>
-  <generator uri="http://octopress.org/">Octopress</generator>
+	<title><![CDATA[My Octopress Blog]]></title>
+	<link href="http://mikespangler.github.io/atom.xml" rel="self"/>
+	<link href="http://mikespangler.github.io/"/>
+	<updated>2013-10-15T22:06:23-04:00</updated>
+	<id>http://mikespangler.github.io/</id>
+	<author>
+		<name><![CDATA[Your Name]]></name>
+		
+	</author>
+	<generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[The End of Fun]]></title>
-    <link href="http://mikespangler.github.io/blog/2013/10/08/the-end-of-fun/"/>
-    <updated>2013-10-08T20:38:00-04:00</updated>
-    <id>http://mikespangler.github.io/blog/2013/10/08/the-end-of-fun</id>
-    <content type="html"><![CDATA[<h2>Who Makes a Better Coder?</h2>
+	
+	<entry>
+		
+			<title type="html"><![CDATA[The End of Fun]]></title>
+		
+		<link href="http://mikespangler.github.io/blog/2013/10/08/the-end-of-fun/"/>
+		<updated>2013-10-08T20:38:00-04:00</updated>
+		<id>http://mikespangler.github.io/blog/2013/10/08/the-end-of-fun</id>
+		<content type="html">
+			<![CDATA[
+				
+					<p></p>
+				
+			]]>
+			<![CDATA[<h2>Who Makes a Better Coder?</h2>
 
 <h4>the rigid taskmaster, or the free-floating esoteric&hellip;</h4>
 
@@ -47,7 +55,8 @@
 <p>So, the next time my tests aren&rsquo;t passing for the 80th consecutive time, and I&rsquo;m throwing up hail mary methods, convinced that Ruby is broken, I&rsquo;m going for a walk.  And it&rsquo;s going to be the most productive thing in the world, because we need both contexts to perform optimally.</p>
 
 <p>To think of it in terms of coffee-  I often wake up in the morning with a few weird ideas bumping around in my cerebral stew… fresh ideas that originated in the context of sleep, in the whitespace afforded by dreams.  That&rsquo;s a powerfully creative state of mind that I crave, but if I didn&rsquo;t get up and have my coffee, I&rsquo;d lay in bed all day dreaming.</p>
-]]></content>
-  </entry>
-  
+]]>
+		</content>
+	</entry>
+	
 </feed>
