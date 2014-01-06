@@ -1,0 +1,68 @@
+<h1>rails magic : form_for</h1>
+
+<p>When refactoring forms, I often find that I have eschewed rails magic in favor of needlessly verbose statements.  In this post, I will closely examine the <code>form_for</code> helper in order to determine exactly what shortcuts it offers.</p>
+
+<p><code>form_for</code> &lsquo;binds&rsquo; a form to a model object that you declare.</p>
+
+<pre><code>&lt;%= form_for @cheese %&gt;
+</code></pre>
+
+<p>In this case we have binded our form to our Cheese model.  To create a new instance of Cheese , we have a method in our controller that probably looks something like this.</p>
+
+<pre><code>class CheeseController &lt; ApplicationController
+    def new
+      @cheese = Cheese.new
+    end
+    def create
+      @bowl = Bowl.create(bowl_params)
+      @bowl.save
+      Player.add_new_bowl
+      redirect_to bowls_path
+    end
+ end
+</code></pre>
+
+<p>The form_for method creates a form builder object that is expressed with the <code>f</code> variable.  You can call a myriad number of methods on <code>f</code> to generate your HTML form.</p>
+
+<pre><code>&lt;%= form_for @cheese do |f| %&gt;
+  &lt;%= f.label_tag :stinkiness, "Stinkiness" %&gt;
+  &lt;%= f.text_field :stinkiness %&gt;
+  &lt;%= f.submit "Create" %&gt;
+&lt;% end %&gt;
+</code></pre>
+
+<p>The above ERB will generate the below HTML.</p>
+
+<pre><code>&lt;form accept-charset="UTF-8" action="/cheeses" class="cheese"   id="new_cheese" method="post"&gt;
+  &lt;label for="stinkiness"&gt;Stinkiness&lt;/label&gt;
+  &lt;input id="cheese_stinkiness" name="cheese[stinkiness]" type="text" /&gt;&lt;br&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>So what did we get from our <code>form_for</code>?</p>
+
+<p>Well, we never specified whether we wanted to create a new instance of cheese, or update an old one.  Because of <code>form_for</code>, Rails knew to call <code>record.new_record?</code>, and determined that the method called should be &lsquo;create&rsquo;, and not &lsquo;patch&rsquo;.  We saved ourselves the trouble of writing the following line of code.</p>
+
+<pre><code>form_for(@cheese, url: {action: "create"})
+</code></pre>
+
+<p>Had our record already existed and our goal was to update, we would have saved writing the following line of code.</p>
+
+<pre><code>form_for(@cheese, url: cheese_path(@cheese), html: {method: "patch"})
+</code></pre>
+
+<p>Also, <code>form_for</code> created a new key in the params hash called <code>params[:cheese]</code>, that has all the input fields as key-value pairs.  This is particularly useful when editing multiple objects in the same form with the <code>fields_for</code> tag.</p>
+
+<p>The last benefit of <code>form_for</code> is in the realm of routing namespaces. If in our routes we had code like this:</p>
+
+<pre><code>namespace :charcuterie do
+  resources :cheeses
+end
+</code></pre>
+
+<p>We could specify to our form the correct path and action with <code>form_for</code> simply by using the below code.</p>
+
+<pre><code>form_for [:charcuterie, @cheese]
+</code></pre>
+
+<p>This has been a brief summary of the magic of <code>form_for</code>.  Stay tuned for future snippets on choice bits of rails magic.</p>
