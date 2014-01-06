@@ -3,9 +3,9 @@
 # ----------------------- #
 
 url: http://mikespangler.github.io
-title: My Octopress Blog
+title: EPIC RUBY SMASH TIME GO BOOM 
 subtitle: A blogging framework for hackers.
-author: Your Name
+author: Mike Spangler
 simple_search: http://google.com/search
 description:
 
@@ -63,7 +63,7 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.
 # ----------------------- #
 
 # Github repositories
-github_user:
+github_user: http://github.com/mikespangler
 github_repo_count: 0
 github_show_profile_link: true
 github_skip_forks: true
